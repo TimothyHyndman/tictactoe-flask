@@ -1,0 +1,102 @@
+body {
+    background-color: slategray;
+    text-align: center;
+    margin: 0;
+}
+
+p {
+    color: white;
+}
+
+h1 {
+  color: white;
+  margin: 100px;
+}
+
+
+.game_container {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.board {
+  display: grid;
+  width: 300px;
+  height: 300px;
+  grid-template-columns: auto auto auto;
+}
+
+.board:hover {
+  cursor: pointer;
+}
+
+.square {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  border: 2px solid white;
+  transition: background 0.2s ease-in-out;
+  margin: 0
+}
+
+.square:hover {
+  background: lightslategray;
+}
+
+.square > img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+button > img{
+  max-width: 90%;
+  max-height: 90%;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/*Make the board look like a traditional tic tac toe board*/
+#square_00,
+#square_01,
+#square_02 {
+  border-top: none;
+}
+
+#square_00,
+#square_10,
+#square_20 {
+  border-left: none;
+}
+
+#square_20,
+#square_21,
+#square_22 {
+  border-bottom: none;
+}
+
+#square_02,
+#square_12,
+#square_22 {
+  border-right: none;
+}

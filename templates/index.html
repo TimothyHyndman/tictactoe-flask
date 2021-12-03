@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>tic tac toe</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+    <body>
+        <div class="game_container">
+            <h1>tic tac toe</h1>
+            <div class="board">
+            <div id="square_00" class="square">
+                <form method="POST" action="{{ url_for('click_square', x=0, y=0) }}">
+                    <button type="submit" name="board" value="{{ board }}"><img src="{{ square_00_image }}" alt="square"/></button>
+                </form>
+            </div>
+            <div id="square_01" class="square">
+                <form method="POST" action="{{ url_for('click_square', x=1, y=0) }}">
+                    <button type="submit" name="board" value="{{ board }}"><img src="{{ square_01_image }}" alt="square"/></button>
+                </form>
+            </div>
+            <div id="square_02" class="square">
+                <form method="POST" action="{{ url_for('click_square', x=2, y=0) }}">
+                    <button type="submit" name="board" value="{{ board }}"><img src="{{ square_02_image }}" alt="square"/></button>
+                </form>
+            </div>
+            <div id="square_10" class="square">
+                <form method="POST" action="{{ url_for('click_square', x=0, y=1) }}">
+                    <button type="submit" name="board" value="{{ board }}"><img src="{{ square_10_image }}" alt="square"/></button>
+                </form>
+            </div>
+            <div id="square_11" class="square">
+                <form method="POST" action="{{ url_for('click_square', x=1, y=1) }}">
+                    <button type="submit" name="board" value="{{ board }}"><img src="{{ square_11_image }}" alt="square"/></button>
+                </form>
+            </div>
+            <div id="square_12" class="square">
+                <form method="POST" action="{{ url_for('click_square', x=2, y=1) }}">
+                    <button type="submit" name="board" value="{{ board }}"><img src="{{ square_12_image }}" alt="square"/></button>
+                </form>
+            </div>
+            <div id="square_20" class="square">
+                <form method="POST" action="{{ url_for('click_square', x=0, y=2) }}">
+                    <button type="submit" name="board" value="{{ board }}"><img src="{{ square_20_image }}" alt="square"/></button>
+                </form>
+            </div>
+            <div id="square_21" class="square">
+                <form method="POST" action="{{ url_for('click_square', x=1, y=2) }}">
+                    <button type="submit" name="board" value="{{ board }}"><img src="{{ square_21_image }}" alt="square"/></button>
+                </form>
+            </div>
+            <div id="square_22" class="square">
+                <form method="POST" action="{{ url_for('click_square', x=2, y=2) }}">
+                    <button type="submit" name="board" value="{{ board }}"><img src="{{ square_22_image }}" alt="square"/></button>
+                </form>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
